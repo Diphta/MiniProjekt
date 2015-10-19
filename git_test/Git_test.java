@@ -18,6 +18,9 @@ public class Git_test {
         System.out.println("Hello");
         System.out.println("Hey");
        int value = 100;
+       /* så kan vi da bare lave alt muligt gøjl
+       hahaha 
+       */
     }
     
 }
