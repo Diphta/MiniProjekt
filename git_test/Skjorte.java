@@ -10,15 +10,15 @@ package git_test;
  * @author philip
  */
 public class Skjorte {
-    private String navn;
-    private double pris;
-    private int[] størrelse;
-    private String[] farve;
+    private String name;
+    private double price;
+    private int[] size;
+    private String[] color;
     
-    public Skjorte(String navn, double pris, int[] størrelse, String[] farve) {
-        this.navn = navn;
-        this.pris = pris;
-        this.størrelse = størrelse;
-        this.farve = farve;
+    public Skjorte(String name, double price, int[] size, String[] color) {
+        this.name = name;
+        this.price = price;
+        this.size = size;
+        this.color = color;
     }
 }
