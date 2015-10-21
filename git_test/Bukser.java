@@ -10,16 +10,16 @@ package git_test;
  * @author philip
  */
 public class Bukser {
-    private String navn;
-    private double pris;
-    private int[] størrelse;
-    private String[] farve;
+    private String name;
+    private double price;
+    private int[] size;
+    private String[] color;
     
-    public Bukser(String navn, double pris, int[] størrelse, String[] farve) {
-        this.navn = navn;
-        this.pris = pris;
-        this.størrelse = størrelse;
-        this.farve = farve;   
+    public Bukser(String name, double price, int[] size, String[] color) {
+        this.name = name;
+        this.price = price;
+        this.size = size;
+        this.color = color;   
     }
     
             
