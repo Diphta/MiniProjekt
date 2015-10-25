@@ -9,16 +9,16 @@ package git_test;
  *
  * @author philip
  */
-public class Skjorte {
-    private String name;
-    private double price;
-    private int[] size;
-    private String[] color;
+public class Skjorte extends Product {
+
     
-    public Skjorte(String name, double price, int[] size, String[] color) {
+    public Skjorte(String name, double price, String[] color, String[] size) {
         this.name = name;
         this.price = price;
-        this.size = size;
         this.color = color;
+        this.size = size;
+        
     }
+    
+    
 }
