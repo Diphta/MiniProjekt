@@ -9,16 +9,14 @@ package git_test;
  *
  * @author philip
  */
-public class TShirt {
-    private String name;
-    private double price;
-    private String[] size;
-    private String[] color;
+public class TShirt extends Product {
+
     
-    public TShirt(String name, double price, String[] size, String[] color) {
+    public TShirt(String name, double price, String[] color, String[] size) {
         this.name = name;
         this.price = price;
-        this.size = size;
         this.color = color;
+        this.size = size;
+        
     }
 }
