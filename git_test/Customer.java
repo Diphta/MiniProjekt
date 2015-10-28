@@ -11,6 +11,7 @@ package git_test;
  */
 public class Customer {
     private String name;
+    private String lastname;
     private String address;
     private String email;
     private int phone;
@@ -21,8 +22,9 @@ public class Customer {
         
     }
 
-    public Customer(String name, String address, String email, int phone, String cardNumber, int controlDigits) {
+    public Customer(String name,String lastname, String address, String email, int phone, String cardNumber, int controlDigits) {
         this.name = name;
+        this.lastname = lastname;
         this.address = address;
         this.email = email;
         this.phone = phone;
@@ -34,7 +36,7 @@ public class Customer {
     
     
     public String customerDetails() {
-        return name + "\n" + address + "\n" + email
+        return name + lastname + "\n" + address + "\n" + email
                 + "\n" + phone + "\n" + cardNumber + "\n" + controlDigits;
     }
     

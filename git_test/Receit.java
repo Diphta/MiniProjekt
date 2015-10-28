@@ -15,7 +15,7 @@ public class Receit extends Customer {
     public void printOrder() {
         //getters skal laves fra jTextFields som kunder fylder info ind i
         //fx: navn: navnefelt.getText() som første parameter i constructor'en
-        Customer kunde = new Customer("kunde ", "Kundegade 25 ", "Kunde@gmail.com ", 22045912, " 1234 1234 1234 1234 ", 123);
+        Customer kunde = new Customer("kundenavn ", "efternavn", "Kundegade 25 ", "Kunde@gmail.com ", 22045912, " 1234 1234 1234 1234 ", 123);
         String order = kunde.customerDetails();
         System.out.println(order);
         String filename = "order.txt"; 
