@@ -875,6 +875,7 @@ public class CardGUI extends javax.swing.JFrame {
                     jComboBox2.addItem(item16);
                 }
                 break;
+                
             //OG NU LAVER VI T-SHIRTS
             case "Basis T-Shirt":
                 jComboBox2.removeAllItems();
