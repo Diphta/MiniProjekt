@@ -8,6 +8,9 @@ package git_test;
 import java.awt.CardLayout;
 import git_test.*;
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import javax.swing.BorderFactory;
 
 /**
@@ -158,6 +161,11 @@ public class CardGUI extends javax.swing.JFrame {
         });
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Jeans", "Chinos", "Læderbukser", "Cargo", "Fjøjlsbukser", "Habitbukser", "Sweatpants" }));
+        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox6ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Størrelse");
 
@@ -201,9 +209,7 @@ public class CardGUI extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel4)))
                                 .addGap(0, 66, Short.MAX_VALUE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
@@ -530,6 +536,19 @@ public class CardGUI extends javax.swing.JFrame {
         if (fornavn && efternavn /*&& email*/ && tlf && adresse && nr && postnummer && kortnummer && sikkerhedskode)
         // Lige her skal Receit koden sættes så den printer nær man trykker betal
         //men først efter informationerne er tjekket at de passer, der for lige her.
+        Customer kunde = new Customer("kundenavn ", "efternavn", "Kundegade 25 ", "Kunde@gmail.com ", 22045912, 1234 + " " + 1234 + " ", 123);
+        String order = kunde.customerDetails();
+        System.out.println(order);
+        String filename = "order.txt"; 
+        File fil = new File(filename);
+        PrintWriter pw;
+        try {
+        pw = new PrintWriter(fil);
+        pw.print(order);
+        pw.close();
+        } catch (IOException ex) {
+        System.out.println("Det var ikke muligt at printe ordren: " + ex.getMessage());
+       }
         {
         cl.next(jPanel1);
                 }
@@ -555,11 +574,33 @@ public class CardGUI extends javax.swing.JFrame {
         type = (String)jComboBox1.getSelectedItem();
         switch(type){
             case "Bukser":
-                jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(String[]{"Jeans", "Cinos", "Læderbukser", "Cargo", "Fjøjlsbukser", "Habitbukser", "Sweatpants"}));
+                jComboBox6.removeAllItems();
+                
+                String[] items = new String[]{"Jeans", "Cinos", "Læderbukser", "Cargo", "Fjøjlsbukser", "Habitbukser", "Sweatpants"};
+                for (String item : items) {
+                    jComboBox6.addItem(item);
+                }
+            break;
+                
+               // jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(String[]{"Jeans", "Cinos", "Læderbukser", "Cargo", "Fjøjlsbukser", "Habitbukser", "Sweatpants"}));
             case "Skjorter":
-                jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(String[]{"Bomuldsskjorte", "Denimskjorte", "Cottonskjorte", "Flonelskjorte", "Twillskjorte", "Oxfordskjorte"}));
-            case "T-Shirts":   
-                jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(String[]{"Basis T-Shirt", "T-Shirt med V-udskæring", "T-Shirt med Stretch", "Lang T-Shirt", "T-Shirt med tryk", "Stribet T-Shirt", "T-Shirt i vaffelstrik"}));
+                jComboBox6.removeAllItems();
+                
+                String[] items2 = new String[]{"Bomuldsskjorte", "Denimskjorte", "Cottonskjorte", "Flonelskjorte", "Twillskjorte", "Oxfordskjorte"};
+                for (String item2 : items2) {
+                    jComboBox6.addItem(item2);
+                }
+            break;
+                //jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(String[]{"Bomuldsskjorte", "Denimskjorte", "Cottonskjorte", "Flonelskjorte", "Twillskjorte", "Oxfordskjorte"}));
+            case "T-Shirts":  
+                jComboBox6.removeAllItems();
+                
+                String[] items3 = new String[]{"Basis T-Shirt", "T-Shirt med V-udskæring", "T-Shirt med Stretch", "Lang T-Shirt", "T-Shirt med tryk", "Stribet T-Shirt", "T-Shirt i vaffelstrik"};
+                for (String item3 : items3) {
+                    jComboBox6.addItem(item3);
+                }
+            break;
+                //jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(String[]{"Basis T-Shirt", "T-Shirt med V-udskæring", "T-Shirt med Stretch", "Lang T-Shirt", "T-Shirt med tryk", "Stribet T-Shirt", "T-Shirt i vaffelstrik"}));
             //Her mangler kode til combobox, så de viser forskellige informationer
             //alt efter produkt farve og størrelse. Vi skal huske at tilføje pris til varene.
         }
@@ -582,6 +623,10 @@ public class CardGUI extends javax.swing.JFrame {
     private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
         // Her Skal være noget kode til Mastercard og Dankort
     }//GEN-LAST:event_jComboBox7ActionPerformed
+
+    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox6ActionPerformed
 
     /**
      * @param args the command line arguments
