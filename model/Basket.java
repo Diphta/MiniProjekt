@@ -12,21 +12,21 @@ import java.util.ArrayList;
  * @author Simon
  */
 public class Basket {
+
     private ArrayList<Product> products;
     private Customer customer;
-    
-    
-    public Basket(Customer customer){
+
+    public Basket(Customer customer) {
         products = new ArrayList<>();
         this.customer = customer;
-        
+
     }
-    
-    public ArrayList<Product> getProducts(){
+
+    public ArrayList<Product> getProducts() {
         return products;
     }
-    
-    public Receit generateReceit(){
+
+    public Receit generateReceit() {
         String receitContent = "";
         receitContent += customer + "\n";
         receitContent += "-------------\n";
@@ -35,11 +35,11 @@ public class Basket {
         }
         receitContent += "==============\n";
         receitContent += getTotal();
-        
+
         return new Receit(receitContent);
     }
-    
-    public double getTotal(){
+
+    public double getTotal() {
         double sum = 0;
         for (Product product : products) {
             sum += product.getProductType().getPrice();
@@ -47,3 +47,4 @@ public class Basket {
         return sum;
     }
 }
+

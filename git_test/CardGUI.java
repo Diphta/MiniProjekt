@@ -36,13 +36,13 @@ public class CardGUI extends javax.swing.JFrame {
         productTypes.add(new ProductType("Skjorter", 50.0));
         productTypes.add(new ProductType("T-shirts", 50.0));
 
-        productTypes.get(0).getProducts().add(new Product("Jeans", "Sort", "28"));
-        productTypes.get(0).getProducts().add(new Product("Chinos", "Rød", "30"));
-        productTypes.get(0).getProducts().add(new Product("Læderbukser", "Grøn", "32"));
-        productTypes.get(0).getProducts().add(new Product("Cargo", "Gul", "33"));
-        productTypes.get(0).getProducts().add(new Product("Fløjelsbukser", "Brun", "31"));
-        productTypes.get(0).getProducts().add(new Product("Habitbukser", "Sort", "28"));
-        productTypes.get(0).getProducts().add(new Product("Sweatpants", "Sort", "28"));
+        productTypes.get(0).getProducts().add(new Product("Jeans", "Sort", "28",productTypes.get(0)));
+        productTypes.get(0).getProducts().add(new Product("Chinos", "Rød", "30",productTypes.get(0)));
+        productTypes.get(0).getProducts().add(new Product("Læderbukser", "Grøn", "32",productTypes.get(0)));
+        productTypes.get(0).getProducts().add(new Product("Cargo", "Gul", "33",productTypes.get(0)));
+        productTypes.get(0).getProducts().add(new Product("Fløjelsbukser", "Brun", "31",productTypes.get(0)));
+        productTypes.get(0).getProducts().add(new Product("Habitbukser", "Sort", "28",productTypes.get(0)));
+        productTypes.get(0).getProducts().add(new Product("Sweatpants", "Sort", "28",productTypes.get(0)));
         for (ProductType productType : productTypes) {
             jComboBox1.addItem(productType);
         }

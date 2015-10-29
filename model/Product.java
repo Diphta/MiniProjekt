@@ -14,12 +14,24 @@ public class Product {
     private String name;
     private String color;
     private String size;
+    private ProductType productType;
 
-    public Product(String name, String color, String size) {
+    public Product(String name, String color, String size, ProductType productType) {
         this.name = name;
         this.color = color;
         this.size = size;
+        this.productType = productType;
     }
+
+    public ProductType getProductType() {
+        return productType;
+    }
+
+    public void setProductType(ProductType productType) {
+        this.productType = productType;
+    }
+
+   
 
     @Override
     public String toString() {
