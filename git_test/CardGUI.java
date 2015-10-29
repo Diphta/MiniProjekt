@@ -550,44 +550,384 @@ public class CardGUI extends javax.swing.JFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void updateSizes() {
         String type;
-        if (jComboBox6.getItemCount() > 0) {
-            type = (String) jComboBox3.getSelectedItem();
+      
+            type = (String) jComboBox6.getSelectedItem();
             switch (type) {
                 case "Jeans":
                     jComboBox3.removeAllItems();
 
-                    String[] items5 = new String[]{"28", "29", "31", "33", "36"};
-                    for (String item5 : items5) {
-                        jComboBox3.addItem(item5);
+                    String[] items24 = new String[]{"28", "29", "31", "33", "36"};
+                    for (String item24 : items24) {
+                        jComboBox3.addItem(item24);
                     }
                     break;
-        //Skjorter
 
-                case "Bomuldsskjorte":
+                case "Chinos":
                     jComboBox3.removeAllItems();
 
-                    String[] items10 = new String[]{"38", "39", "40", "42", "44", "54"};
+                    String[] items25 = new String[]{"29", "30", "32", "34", "38"};
+                    for (String item25 : items25) {
+                        jComboBox3.addItem(item25);
+                    }
+                    break;
+
+                case "Læderbukser":
+                    jComboBox3.removeAllItems();
+
+                    String[] items26 = new String[]{"28", "31", "32", "34", "36"};
+                    for (String item26 : items26) {
+                        jComboBox3.addItem(item26);
+                    }
+                    break;
+
+                case "Cargo":
+                    jComboBox3.removeAllItems();
+
+                    String[] items7 = new String[]{"29", "30", "33", "34", "38"};
+                    for (String item7 : items7) {
+                        jComboBox3.addItem(item7);
+                    }
+                    break;
+
+                case "Fløjlsbukser":
+                    jComboBox3.removeAllItems();
+
+                    String[] items8 = new String[]{"28", "29", "30", "31", "33"};
+                    for (String item8 : items8) {
+                        jComboBox3.addItem(item8);
+                    }
+                    break;
+
+                case "Habitbukser":
+                    jComboBox3.removeAllItems();
+
+                    String[] items9 = new String[]{"28", "32", "33", "36", "38"};
+                    for (String item9 : items9) {
+                        jComboBox3.addItem(item9);
+                    }
+                    break;
+
+                case "Sweatpants":
+                    jComboBox3.removeAllItems();
+
+                    String[] items10 = new String[]{"29", "31", "32", "34", "38"};
                     for (String item10 : items10) {
                         jComboBox3.addItem(item10);
                     }
                     break;
-        //T-shirt
-
-                case "Basis T-shirt":
+                //----Skjorter-----
+                case "Bomuldsskjorte":
                     jComboBox3.removeAllItems();
 
-                    String[] items11 = new String[]{"S", "M", "L", "XXL"};
+                    String[] items11 = new String[]{"38", "39", "40", "42", "44", "54"};
                     for (String item11 : items11) {
                         jComboBox3.addItem(item11);
                     }
                     break;
+
+                case "Denimskjorte":
+                    jComboBox3.removeAllItems();
+
+                    String[] items12 = new String[]{"38", "39", "41", "43", "44", "45"};
+                    for (String item12 : items12) {
+                        jComboBox3.addItem(item12);
+                    }
+                    break;
+
+                case "Cottonskjorte":
+                    jComboBox3.removeAllItems();
+
+                    String[] items13 = new String[]{"38", "40", "42", "43", "44", "45"};
+                    for (String item13 : items13) {
+                        jComboBox3.addItem(item13);
+                    }
+                    break;
+
+                case "Flonelskjorte":
+                    jComboBox3.removeAllItems();
+
+                    String[] items14 = new String[]{"39", "41", "42", "43", "44", "45"};
+                    for (String item14 : items14) {
+                        jComboBox3.addItem(item14);
+                    }
+                    break;
+
+                case "Twillskjorte":
+                    jComboBox3.removeAllItems();
+
+                    String[] items15 = new String[]{"38", "40", "41", "42", "43", "44"};
+                    for (String item15 : items15) {
+                        jComboBox3.addItem(item15);
+                    }
+                    break;
+
+                case "Oxfordskjorte":
+                    jComboBox3.removeAllItems();
+
+                    String[] items16 = new String[]{"39", "40", "41", "42", "43", "45"};
+                    for (String item16 : items16) {
+                        jComboBox3.addItem(item16);
+                    }
+                    break;
+                //----T-SHIRTS----
+                case "Basis T-Shirt":
+                    jComboBox3.removeAllItems();
+
+                    String[] items17 = new String[]{"S", "M", "L", "XXL"};
+                    for (String item17 : items17) {
+                        jComboBox3.addItem(item17);
+                    }
+                    break;
+
+                case "T-shirt med V-udskæring":
+                    jComboBox3.removeAllItems();
+
+                    String[] items18 = new String[]{"S", "M", "L", "LX"};
+                    for (String item18 : items18) {
+                        jComboBox3.addItem(item18);
+                    }
+                    break;
+
+                case "T-shirt med Stretch":
+                    jComboBox3.removeAllItems();
+
+                    String[] items19 = new String[]{"M", "L", "XL", "XXL"};
+                    for (String item19 : items19) {
+                        jComboBox3.addItem(item19);
+                    }
+                    break;
+
+                case "Lang T-shirt":
+                    jComboBox3.removeAllItems();
+
+                    String[] items20 = new String[]{"S", "L", "XL", "XXL"};
+                    for (String item20 : items20) {
+                        jComboBox3.addItem(item20);
+                    }
+                    break;
+
+                case "T-shirt med tryk":
+                    jComboBox3.removeAllItems();
+
+                    String[] items21 = new String[]{"S", "M", "XL", "XXL"};
+                    for (String item21 : items21) {
+                        jComboBox3.addItem(item21);
+                    }
+                    break;
+
+                case "Stribet T-shirt":
+                    jComboBox3.removeAllItems();
+
+                    String[] items22 = new String[]{"S", "M", "L", "XXL"};
+                    for (String item22 : items22) {
+                        jComboBox3.addItem(item22);
+                    }
+                    break;
+
+                case "T-shirt i vaffelstrik":
+                    jComboBox3.removeAllItems();
+
+                    String[] items23 = new String[]{"S", "M", "L", "XL"};
+                    for (String item23 : items23) {
+                        jComboBox3.addItem(item23);
+                    }
+                    break;
             }
-        }
+        
+    }
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
+    private void updateColors() {
+        String type;
+
+        type = (String) jComboBox6.getSelectedItem();
+        switch (type) {
+            case "Jeans":
+                jComboBox2.removeAllItems();
+
+                String[] items4 = new String[]{"Sort", "Grå", "Blå", "Hvid"};
+                for (String item4 : items4) {
+                    jComboBox2.addItem(item4);
+                }
+                break;
+
+            case "Chinos":
+                jComboBox2.removeAllItems();
+
+                String[] items5 = new String[]{"Rød", "Brun", "Grå", "Gul"};
+                for (String item5 : items5) {
+                    jComboBox2.addItem(item5);
+                }
+                break;
+
+            case "Læderbukser":
+                jComboBox2.removeAllItems();
+
+                String[] items6 = new String[]{"Sort", "Rød", "Grøn"};
+                for (String item6 : items6) {
+                    jComboBox2.addItem(item6);
+                }
+                break;
+
+            case "Cargo":
+                jComboBox2.removeAllItems();
+
+                String[] items7 = new String[]{"Brun", "Grøn", "Blå", "Gul"};
+                for (String item7 : items7) {
+                    jComboBox2.addItem(item7);
+                }
+                break;
+
+            case "Fløjlsbukser":
+                jComboBox2.removeAllItems();
+
+                String[] items8 = new String[]{"Rød", "Brun", "Grå", "Gul"};
+                for (String item8 : items8) {
+                    jComboBox2.addItem(item8);
+                }
+                break;
+
+            case "Habitbukser":
+                jComboBox2.removeAllItems();
+
+                String[] items9 = new String[]{"Sort", "Grå", "Hvid"};
+                for (String item9 : items9) {
+                    jComboBox2.addItem(item9);
+                }
+                break;
+
+            case "Sweatpants":
+                jComboBox2.removeAllItems();
+
+                String[] items10 = new String[]{"Sort", "Grå", "Rød", "Blå", "Brun"};
+                for (String item10 : items10) {
+                    jComboBox2.addItem(item10);
+                }
+                break;
+            //OKAY NU GÅR VI OVER TIL Skjorter
+            case "Bomuldsskjorte":
+                jComboBox2.removeAllItems();
+
+                String[] items11 = new String[]{"Sort", "Blå", "Rød"};
+                for (String item11 : items11) {
+                    jComboBox2.addItem(item11);
+                }
+                break;
+
+            case "Denimskjorte":
+                jComboBox2.removeAllItems();
+
+                String[] items12 = new String[]{"Grå", "Grøn", "Hvid", "Turkis"};
+                for (String item12 : items12) {
+                    jComboBox2.addItem(item12);
+                }
+                break;
+
+            case "Cottonskjorte":
+                jComboBox2.removeAllItems();
+
+                String[] items13 = new String[]{"Blå", "Gul", "Lyserød", "Brun"};
+                for (String item13 : items13) {
+                    jComboBox2.addItem(item13);
+                }
+                break;
+
+            case "Flonelskjorte":
+                jComboBox2.removeAllItems();
+
+                String[] items14 = new String[]{"Grøn", "Rød", "Lime", "Sort"};
+                for (String item14 : items14) {
+                    jComboBox2.addItem(item14);
+                }
+                break;
+
+            case "Twillskjorte":
+                jComboBox2.removeAllItems();
+
+                String[] items15 = new String[]{"Gul", "Hvid", "Turkis", "Grå"};
+                for (String item15 : items15) {
+                    jComboBox2.addItem(item15);
+                }
+                break;
+
+            case "Oxfordskjorte":
+                jComboBox2.removeAllItems();
+
+                String[] items16 = new String[]{"Rød", "Lyserød", "Brun", "Blå"};
+                for (String item16 : items16) {
+                    jComboBox2.addItem(item16);
+                }
+                break;
+                
+            //OG NU LAVER VI T-SHIRTS
+            case "Basis T-Shirt":
+                jComboBox2.removeAllItems();
+
+                String[] items17 = new String[]{"Hvid", "Lime", "Sort", "Grøn"};
+                for (String item17 : items17) {
+                    jComboBox2.addItem(item17);
+                }
+                break;
+
+            case "T-shirt med V-udskæring":
+                jComboBox2.removeAllItems();
+
+                String[] items18 = new String[]{"Lyserød", "Turkis", "Grå", "Gul"};
+                for (String item18 : items18) {
+                    jComboBox2.addItem(item18);
+                }
+                break;
+
+            case "T-shirt med Stretch":
+                jComboBox2.removeAllItems();
+
+                String[] items19 = new String[]{"Lime", "Brun", "Blå", "Rød"};
+                for (String item19 : items19) {
+                    jComboBox2.addItem(item19);
+                }
+                break;
+
+            case "Lang T-shirt":
+                jComboBox2.removeAllItems();
+
+                String[] items20 = new String[]{"Turkis", "Sort", "Grøn", "Hvid"};
+                for (String item20 : items20) {
+                    jComboBox2.addItem(item20);
+                }
+                break;
+
+            case "T-shirt med tryk":
+                jComboBox2.removeAllItems();
+
+                String[] items21 = new String[]{"Brun", "Grå", "Gul", "Sort"};
+                for (String item21 : items21) {
+                    jComboBox2.addItem(item21);
+                }
+                break;
+
+            case "Stribet T-shirt":
+                jComboBox2.removeAllItems();
+
+                String[] items22 = new String[]{"Sort", "Blå", "Rød"};
+                for (String item22 : items22) {
+                    jComboBox2.addItem(item22);
+                }
+                break;
+
+            case "T-shirt i vaffelstrik":
+                jComboBox2.removeAllItems();
+
+                String[] items23 = new String[]{"Grå", "Grøn", "Hvid", "Turkis"};
+                for (String item23 : items23) {
+                    jComboBox2.addItem(item23);
+                }
+                break;
+        }
+    }
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         String type;
         type = (String) jComboBox1.getSelectedItem();
@@ -595,7 +935,7 @@ public class CardGUI extends javax.swing.JFrame {
             case "Bukser":
                 jComboBox6.removeAllItems();
 
-                String[] items = new String[]{"Jeans"/*,"Cinos", "Læderbukser", "Cargo", "Fjøjlsbukser", "Habitbukser", "Sweatpants"*/};
+                String[] items = new String[]{"Jeans", "Cinos", "Læderbukser", "Cargo", "Fjøjlsbukser", "Habitbukser", "Sweatpants"};
                 for (String item : items) {
                     jComboBox6.addItem(item);
                 }
@@ -604,7 +944,7 @@ public class CardGUI extends javax.swing.JFrame {
             case "Skjorter":
                 jComboBox6.removeAllItems();
 
-                String[] items2 = new String[]{"Bomuldsskjorte"/*, "Denimskjorte", "Cottonskjorte", "Flonelskjorte", "Twillskjorte", "Oxfordskjorte"*/};
+                String[] items2 = new String[]{"Bomuldsskjorte", "Denimskjorte", "Cottonskjorte", "Flonelskjorte", "Twillskjorte", "Oxfordskjorte"};
                 for (String item2 : items2) {
                     jComboBox6.addItem(item2);
                 }
@@ -613,7 +953,7 @@ public class CardGUI extends javax.swing.JFrame {
             case "T-Shirts":
                 jComboBox6.removeAllItems();
 
-                String[] items3 = new String[]{"Basis T-Shirt"/*, "T-Shirt med V-udskæring", "T-Shirt med Stretch", "Lang T-Shirt", "T-Shirt med tryk", "Stribet T-Shirt", "T-Shirt i vaffelstrik"*/};
+                String[] items3 = new String[]{"Basis T-Shirt", "T-Shirt med V-udskæring", "T-Shirt med Stretch", "Lang T-Shirt", "T-Shirt med tryk", "Stribet T-Shirt", "T-Shirt i vaffelstrik"};
                 for (String item3 : items3) {
                     jComboBox6.addItem(item3);
                 }
@@ -644,74 +984,9 @@ public class CardGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox7ActionPerformed
 
     private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
-        String type;
         if (jComboBox6.getItemCount() > 0) {
-            type = (String) jComboBox6.getSelectedItem();
-            switch (type) {
-                case "Jeans":
-                    jComboBox2.removeAllItems();
-
-                    String[] items4 = new String[]{"Sort", "Grå", "Blå", "Hvid"};
-                    for (String item4 : items4) {
-                        jComboBox2.addItem(item4);
-                    }
-                    break;
-
-                /*case "Chinos":
-                 jComboBox2.removeAllItems();
-                
-                 String[] items5 = new String[]{"Rød", "Brun", "Grå", "Gul"};
-                 for (String item5 : items5) {
-                 jComboBox2.addItem(item5);
-                 }
-                 break;
-            
-                 case "Læderbukser":
-                 jComboBox2.removeAllItems();
-                
-                 String[] items6 = new String[]{"Sort", "Rød", "Grøn"};
-                 for (String item6 : items6) {
-                 jComboBox2.addItem(item6);
-                 }
-                 break;
-                
-                 case "Cargo":
-                 jComboBox2.removeAllItems();
-                
-                 String[] items7 = new String[]{"Brun", "Grøn", "Blå", "Gul"};
-                 for (String item7 : items7) {
-                 jComboBox2.addItem(item7);
-                 }
-                 break;
-                    
-                 case "Fløjlsbukser":
-                 jComboBox2.removeAllItems();
-                
-                 String[] items5 = new String[]{"Rød", "Brun", "Grå", "Gul"};
-                 for (String item5 : items5) {
-                 jComboBox2.addItem(item5);
-                 }
-                 break;*/
-                //OKAY NU GÅR VI OVER TIL Skjorter
-                case "Bomuldsskjorte":
-                    jComboBox2.removeAllItems();
-
-                    String[] items7 = new String[]{"Sort", "Blå", "Rød"};
-                    for (String item7 : items7) {
-                        jComboBox2.addItem(item7);
-                    }
-                    break;
-
-                //OG NU LAVER VI T-SHIRTS
-                case "Basis T-shirt":
-                    jComboBox2.removeAllItems();
-
-                    String[] items8 = new String[]{"Hvid", "Lime", "Sort", "Grøn"};
-                    for (String item8 : items8) {
-                        jComboBox2.addItem(item8);
-                    }
-                    break;
-            }
+            updateSizes();
+            updateColors();
         }
     }//GEN-LAST:event_jComboBox6ActionPerformed
 
