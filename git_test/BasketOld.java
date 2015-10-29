@@ -5,17 +5,16 @@
  */
 package git_test;
 
-import java.util.ArrayList;
+
 
 /**
  *
- * @author Bruger
+ * @author Simon
  */
-public class Basket {
+public class BasketOld {
+    private String[] indkøbsliste;
     
- ArrayList<String> list = new ArrayList<>();
- 
- 
     
+    
+    //System.out.println(indkøbsliste);
 }
-
