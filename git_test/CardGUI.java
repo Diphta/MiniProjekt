@@ -486,6 +486,14 @@ public class CardGUI extends javax.swing.JFrame {
         jTextArea1.setText("");
         CardLayout cl = (CardLayout) jPanel1.getLayout();
         cl.next(jPanel1);
+        jTextField1.setText("Fornavn");
+        jTextField2.setText("Efternavn");
+        jTextField4.setText("Kort nummer");
+        jTextField5.setText("Adresse");
+        jTextField6.setText("Postnummer");
+        jTextField7.setText("Sikkerhedskode");
+        jTextField8.setText("Tlf");
+        jTextField9.setText("nr");
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -502,7 +510,8 @@ public class CardGUI extends javax.swing.JFrame {
         if (jTextField2.getText().matches("[a-zA-Z]+")) {
             efternavn = true;
 
-            jTextField2.getBorder();
+            jTextField2.setBorder(null);
+            jTextField2.updateUI();
         } else {
             jTextField2.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
@@ -510,6 +519,9 @@ public class CardGUI extends javax.swing.JFrame {
         /*boolean email = false;
          if (jTextField3.getText().matches("[HER FUCKER DET OP]+")) {
          email = true;
+        
+        jTextField3.setBorder(null);
+        jTextField3.updateUI();
          }
          else { jTextField3.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
          }*/
@@ -517,7 +529,8 @@ public class CardGUI extends javax.swing.JFrame {
         if (jTextField8.getText().matches("[0-9]+")) {
             tlf = true;
 
-            jTextField8.getBorder();
+            jTextField8.setBorder(null);
+            jTextField8.updateUI();
         } else {
             jTextField8.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
@@ -525,7 +538,8 @@ public class CardGUI extends javax.swing.JFrame {
         if (jTextField5.getText().matches("[a-zA-Z]+")) {
             adresse = true;
 
-            jTextField5.getBorder();
+            jTextField5.setBorder(null);
+            jTextField5.updateUI();
         } else {
             jTextField5.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
@@ -533,7 +547,8 @@ public class CardGUI extends javax.swing.JFrame {
         if (jTextField9.getText().matches("[a-zA-Z_0-9]+")) {
             nr = true;
 
-            jTextField9.getBorder();
+            jTextField9.setBorder(null);
+            jTextField9.updateUI();
         } else {
             jTextField9.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
@@ -541,7 +556,8 @@ public class CardGUI extends javax.swing.JFrame {
         if (jTextField6.getText().matches("[0-9]+")) {
             postnummer = true;
 
-            jTextField6.getBorder();
+            jTextField6.setBorder(null);
+            jTextField6.updateUI();
         } else {
             jTextField6.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
@@ -549,7 +565,8 @@ public class CardGUI extends javax.swing.JFrame {
         if (jTextField4.getText().matches("[0-9]+")) {
             kortnummer = true;
 
-            jTextField4.getBorder();
+            jTextField4.setBorder(null);
+            jTextField4.updateUI();
         } else {
             jTextField4.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
@@ -557,7 +574,8 @@ public class CardGUI extends javax.swing.JFrame {
         if (jTextField7.getText().matches("[0-9]+")) {
             sikkerhedskode = true;
 
-            jTextField7.getBorder();
+            jTextField7.setBorder(null);
+            jTextField7.updateUI();
         } else {
             jTextField7.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
