@@ -22,6 +22,14 @@ public class Basket {
 
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
     public ArrayList<Product> getProducts() {
         return products;
     }
@@ -35,8 +43,9 @@ public class Basket {
         }
         receitContent += "==============\n";
         receitContent += getTotal();
-
-        return new Receit(receitContent);
+        Receit receit = new Receit(receitContent);
+        receit.printReceit();
+        return receit;
     }
 
     public double getTotal() {
@@ -46,5 +55,8 @@ public class Basket {
         }
         return sum;
     }
+
+    
+    
 }
 
