@@ -509,11 +509,14 @@ public class CardGUI extends javax.swing.JFrame {
         firstNameField.setText("Fornavn");
         lastNameField.setText("Efternavn");
         cardNumberField.setText("Kort nummer");
+        emailField.setText("E-Mail");
         addressField.setText("Adresse");
         postalCodeField.setText("Postnummer");
         cvcField.setText("Sikkerhedskode");
         phoneField.setText("Tlf");
         adNumberField.setText("nr");
+        
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -535,7 +538,7 @@ public class CardGUI extends javax.swing.JFrame {
             customerFail = true;
             lastNameField.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
-        //det der pis virker sku ik, find ud af hvordan vi både kan ha tal, bogstaver og tegn i textfieldet.
+        
         if (emailField.getText().matches("[a-zA-z_0-9@.-_]+")) {
 
             emailField.setBorder(null);
@@ -598,13 +601,15 @@ public class CardGUI extends javax.swing.JFrame {
             
             int phone = Integer.parseInt(phoneField.getText());
             int cvc = Integer.parseInt(cvcField.getText());
+            int zipcode = Integer.parseInt(postalCodeField.getText());
             Basket basket = new Basket(null);
-            customer = new Customer(firstNameField.getText(), lastNameField.getText(), addressField.getText(), emailField.getText(), phone, cardNumberField.getText(), cvc, basket);
+            customer = new Customer(firstNameField.getText(), lastNameField.getText(), addressField.getText(), zipcode , emailField.getText(), phone, cardNumberField.getText(), cvc, basket);
             basket.setCustomer(customer);
             
             basket.getProducts().addAll(getProductsFromList());
             basket.generateReceit();
             cl.next(jPanel1);
+            
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -625,8 +630,7 @@ public class CardGUI extends javax.swing.JFrame {
         Product selectedProduct = (Product) jComboBox6.getSelectedItem();
         selectedProduct.setColor((String) jComboBox3.getSelectedItem());
         selectedProduct.setSize((String) jComboBox2.getSelectedItem());
-        System.out.println(selectedProduct.getColor());
-        System.out.println(selectedProduct.getSize());
+        
 
         DefaultListModel dfm = new DefaultListModel();
         for (int i = 0; i < basketList.getModel().getSize(); i++) {

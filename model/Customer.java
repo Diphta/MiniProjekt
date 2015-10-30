@@ -13,20 +13,19 @@ public class Customer {
     private String name;
     private String lastname;
     private String address;
+    private int postnummer;
     private String email;
     private int phone;
     private String cardNumber;
     private int controlDigits;
     private Basket basket;
-    
-    public Customer() {
-        
-    }
 
-    public Customer(String name,String lastname, String address, String email, int phone, String cardNumber, int controlDigits, Basket basket) {
+    
+    public Customer(String name, String lastname, String address, int postnummer, String email, int phone, String cardNumber, int controlDigits, Basket basket) {
         this.name = name;
         this.lastname = lastname;
         this.address = address;
+        this.postnummer = postnummer;
         this.email = email;
         this.phone = phone;
         this.cardNumber = cardNumber;
@@ -108,11 +107,11 @@ public class Customer {
     public void setBasket(Basket basket) {
         this.basket = basket;
     }
+        public int getPostnummer() {
+        return postnummer;
+    }
 
-    
-    
-    
-    
-    
-    
+    public void setPostnummer(int postnummer) {
+        this.postnummer = postnummer;
+    }
 }

@@ -36,6 +36,7 @@ public class Basket {
 
     public Receit generateReceit() {
         String receitContent = "";
+        
         receitContent += customer + "\n";
         receitContent += "-------------\n";
         for (Product product : products) {
