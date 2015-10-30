@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package model;
 
 import java.io.File;
@@ -10,14 +6,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-/**
- *
- * @author Simon
- */
 public class Receit {
 
     private String content;
-
+    private int ones;
+    private int tens;
+    private int hundreds;
+    private int thousands;
+    private int tenThousands;
+    
+    
     public Receit(String content) {
         this.content = content;
     }
@@ -31,8 +29,32 @@ public class Receit {
     }
 
     public void printReceit() {
+ ones++;
+       if (ones == 10) {
+           tens++;
+           ones = 0;
+       }
+       if (tens == 10) {
+       hundreds++;
+       tens = 0;
+       }
+       if (hundreds == 10){
+       thousands++;
+       hundreds = 0;
+       }
+       if (thousands == 10){
+           tenThousands ++;
+           thousands = 0;
+       }
+       String str1 = Integer.toString(ones);
+       String str2 = Integer.toString(tens);
+       String str3 = Integer.toString(hundreds);
+       String str4 = Integer.toString(thousands);
+       String str5 = Integer.toString(tenThousands);
+       
+        
         String indkøb = "";
-        String filename = "order.txt";
+        String filename = "Ordernummer: " +str5+str4+str3+str2+str1;
         File fil = new File(filename);
         PrintWriter pw;
         try {
