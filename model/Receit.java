@@ -51,10 +51,11 @@ public class Receit {
        String str3 = Integer.toString(hundreds);
        String str4 = Integer.toString(thousands);
        String str5 = Integer.toString(tenThousands);
-       
+
+        String indkøb = ""; 
+        String filename = "Ordernummer " +str5+str4+str3+str2+str1;
+        content = "Ordernummer: " +str5+str4+str3+str2+str1 +"\n"+ content;
         
-        String indkøb = "";
-        String filename = "Ordernummer: " +str5+str4+str3+str2+str1;
         File fil = new File(filename);
         PrintWriter pw;
         try {

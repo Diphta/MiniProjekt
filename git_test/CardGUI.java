@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package git_test;
 
 
@@ -539,7 +535,7 @@ public class CardGUI extends javax.swing.JFrame {
             lastNameField.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
         
-        if (emailField.getText().matches("[a-zA-z_0-9@.-_]+")) {
+        if (emailField.getText().matches("[a-zA-z_0-9@.-_]+")&& emailField.getText().length()>=9) {
 
             emailField.setBorder(null);
             emailField.updateUI();
@@ -555,7 +551,7 @@ public class CardGUI extends javax.swing.JFrame {
             customerFail = true;
             phoneField.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
-        if (addressField.getText().matches("[a-zA-Z_.]+")) {
+        if (addressField.getText().matches("[a-zA-Z_.-]+")) {
 
             addressField.setBorder(null);
             addressField.updateUI();
@@ -563,7 +559,7 @@ public class CardGUI extends javax.swing.JFrame {
             customerFail = true;
             addressField.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
-        if (adNumberField.getText().matches("[a-zA-Z_0-9.]+")&& adNumberField.getText().length()<10) {
+        if (adNumberField.getText().matches("[a-zA-Z_0-9.-]+")&& adNumberField.getText().length()<=10) {
 
             adNumberField.setBorder(null);
             adNumberField.updateUI();
@@ -609,6 +605,10 @@ public class CardGUI extends javax.swing.JFrame {
             basket.getProducts().addAll(getProductsFromList());
             basket.generateReceit();
             cl.next(jPanel1);
+            
+            //When finished empty lists
+            basket.getProducts().clear();
+            basketList.setModel(new DefaultListModel());
             
         }
     }//GEN-LAST:event_jButton3ActionPerformed

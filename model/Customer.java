@@ -26,14 +26,14 @@ public class Customer {
     }
 
     public String customerDetails() {
-        return  name + lastname + "\n" + address + "\n" + email
-                + "\n" + phone;
+        return  "First Name: "+name + "\n Last Name: " + lastname + "\n Address: " + address + "\n E-Mail: " + email
+                + "\n Phone: " + phone;
     }
     
     @Override
     public String toString(){
-        return name + lastname + "\n" + address + "\n" + email
-                + "\n" + phone;
+        return "First Name: "+name + "\n Last Name: " + lastname + "\n Address: " + address + "\n E-Mail: " + email
+                + "\n Phone: " + phone;
     }
 
     public String getName() {
